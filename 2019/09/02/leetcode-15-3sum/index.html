@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">386</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">289</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -397,31 +397,35 @@ height:50vh;
     <article class="article-entry">
         <h1 id="leetcode-413-Longest-Palindromic-Substring（最长回文子串）"><a href="#leetcode-413-Longest-Palindromic-Substring（最长回文子串）" class="headerlink" title="leetcode-413. Longest Palindromic Substring（最长回文子串）"></a>leetcode-413. Longest Palindromic Substring（最长回文子串）</h1><hr>
 <blockquote>
-<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.<br>Example 1:<br>Input: “babad”<br>Output: “bab”<br>Note: “aba” is also a valid answer.<br>Example 2:<br>Input: “cbbd”<br>Output: “bb”</p>
+<p>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.</p>
+<p>Note:</p>
+<p>The solution set must not contain duplicate triplets.</p>
+<p>Example:</p>
+<p>Given array nums = [-1, 0, 1, 2, -1, -4],</p>
+<p>A solution set is:<br>[<br> [-1, 0, 1],<br> [-1, -1, 2]<br>]</p>
 </blockquote>
-<h4 id="解法1：动态规划"><a href="#解法1：动态规划" class="headerlink" title="解法1：动态规划"></a>解法1：动态规划</h4><p><code>dp(i,j)=1,s(i)==s(j)</code></p>
-<p>​        <code>=0,else</code></p>
-<p><code>初始化 dp(i,i)=1(中点在某个字符上)</code></p>
-<p><code>dp(i,i+1)=1/0(中点在两个字符之间)</code></p>
-<p>初始化之后，从长度为3开始遍历，找最长</p>
-<p><code>class Solution {</code><br><code>public:</code><br>    <code>string longestPalindrome(string s) {</code><br>        <code>int len=s.size();</code><br>        <code>if(len==1||len==0)</code><br>            <code>return s;</code><br>        <code>int start=0,max=1;</code><br>        <code>vector&lt;vector&lt;int&gt;&gt; dp(len,vector&lt;int&gt;(len));</code><br>        <code>for(int i=0;i&lt;len;i++)</code><br>        <code>{</code><br>            <code>dp[i][i]=1;</code><br>            <code>if(i&lt;len-1&amp;&amp;s[i]==s[i+1])</code><br>            <code>{</code><br>                <code>dp[i][i+1]=1;</code><br>                <code>max=2;</code><br>                <code>start=i;</code><br>            <code>}</code><br>        <code>}</code><br>        <code>for(int l=3;l&lt;=len;l++)</code><br>        <code>{</code><br>            <code>for(int i=0;i+l&lt;=len;i++)</code><br>            <code>{</code><br>                <code>int j=i+l-1;//end</code><br>                <code>if(s[i]==s[j]&amp;&amp;dp[i+1][j-1]==1)</code><br>                <code>{</code><br>                    <code>dp[i][j]=1;</code><br>                    <code>start=i;</code><br>                    <code>max=l;</code><br>                <code>}</code><br>            <code>}</code><br>        <code>}</code><br>        <code>return s.substr(start,max);</code><br>    <code>}</code><br><code>};</code></p>
-<h4 id="解法2：中心扩展"><a href="#解法2：中心扩展" class="headerlink" title="解法2：中心扩展"></a>解法2：中心扩展</h4><p>回文中心的两侧互为镜像。因此，回文可以从他的中心展开，中心有两种，字符或字符中间</p>
-<p><code>class Solution {</code><br><code>public:</code><br>    <code>string longestPalindrome(string s) {</code><br>        <code>int len=s.size();</code><br>        <code>if(len==1||len==0)</code><br>            <code>return s;</code><br>        <code>int start=0,end=0,maxlen=0;</code><br>        <code>for(int i=0;i&lt;len;i++)</code><br>        <code>{</code><br>            <code>int len1=findfromcenter(s,i,i);</code><br>            <code>int len2=findfromcenter(s,i,i+1);</code><br>            <code>maxlen=max(max(len1,len2),maxlen);</code><br>            <code>if(maxlen&gt;end-start+1)</code><br>            <code>{</code><br>                <code>start=i-(maxlen-1)/2;</code><br>                <code>end=i+maxlen/2;</code><br>            <code>}</code><br>        <code>}</code><br>        <code>return s.substr(start, maxlen);</code><br>    <code>}</code><br><code>private:</code><br>    <code>int findfromcenter(string s, int left, int right)</code><br>    <code>{</code><br>        <code>int L=left,R= right;</code><br>        <code>while(L&gt;=0 &amp;&amp; R&lt;s.size()&amp;&amp;s[R]==s[L])</code><br>        <code>{</code><br>            <code>L--;R++;</code><br>        <code>}</code><br>        <code>return R-L-1;</code><br>    <code>}</code><br><code>};</code></p>
-
+<p>参考链接: <a href="https://leetcode-cn.com/problems/3sum/solution/three-sum-ti-jie-by-wonderful611/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum/solution/three-sum-ti-jie-by-wonderful611/</a></p>
+<h4 id="解法：双指针"><a href="#解法：双指针" class="headerlink" title="解法：双指针"></a>解法：双指针</h4><p>链接里说的很详细，注意去重复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; threeSum(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        vector&lt;vector&lt;int&gt;&gt; ans;</span><br><span class="line">        if(nums.empty() || nums.front()&gt;0 || nums.back()&lt;0)</span><br><span class="line">            return &#123;&#125;;</span><br><span class="line">        for(int i=0;i&lt;nums.size()-1;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(i&gt;0 &amp;&amp; nums[i-1]==nums[i])continue;</span><br><span class="line">            int l=i+1,r=nums.size()-1;</span><br><span class="line">            while(l&lt;r)</span><br><span class="line">            &#123;</span><br><span class="line">                if(nums[i]+nums[l]+nums[r]&gt;0)</span><br><span class="line">                &#123;</span><br><span class="line">                    while(l&lt;r &amp;&amp; nums[r-1]==nums[r])r--;</span><br><span class="line">                    r--;</span><br><span class="line">                &#125;</span><br><span class="line">                else if(nums[i]+nums[l]+nums[r]&lt;0)</span><br><span class="line">                &#123;</span><br><span class="line">                    while(l&lt;r&amp;&amp; nums[l+1]==nums[l])l++;</span><br><span class="line">                    l++;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    ans.push_back(vector&lt;int&gt;&#123;nums[i],nums[l],nums[r]&#125;);</span><br><span class="line">                    while(l&lt;r &amp;&amp; nums[r-1]==nums[r])r--;</span><br><span class="line">                    while(l&lt;r&amp;&amp; nums[l+1]==nums[l])l++;</span><br><span class="line">                    r--;</span><br><span class="line">                    l++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://763002955.github.io">Xucheng</a>
-            <p>原文链接：<a href="https://763002955.github.io/2019/09/02/leetcode-5-LongestPalindromicSubstring/">https://763002955.github.io/2019/09/02/leetcode-5-LongestPalindromicSubstring/</a>
-            <p>发表日期：<a href="https://763002955.github.io/2019/09/02/leetcode-5-LongestPalindromicSubstring/">September 2nd 2019, 10:41:49 am</a>
-            <p>更新日期：<a href="https://763002955.github.io/2019/09/02/leetcode-5-LongestPalindromicSubstring/">September 2nd 2019, 11:21:00 am</a>
+            <p>原文链接：<a href="https://763002955.github.io/2019/09/02/leetcode-15-3sum/">https://763002955.github.io/2019/09/02/leetcode-15-3sum/</a>
+            <p>发表日期：<a href="https://763002955.github.io/2019/09/02/leetcode-15-3sum/">September 2nd 2019, 10:41:49 am</a>
+            <p>更新日期：<a href="https://763002955.github.io/2019/09/02/leetcode-15-3sum/">September 3rd 2019, 4:55:10 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring - 副本/" title= "leetcode-5. Longest Palindromic Substring">
+                    <div class="nextTitle">leetcode-5. Longest Palindromic Substring</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -540,7 +544,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-413-Longest-Palindromic-Substring（最长回文子串）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-413. Longest Palindromic Substring（最长回文子串）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法1：动态规划"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">解法1：动态规划</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法2：中心扩展"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">解法2：中心扩展</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-413-Longest-Palindromic-Substring（最长回文子串）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-413. Longest Palindromic Substring（最长回文子串）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法：双指针"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">解法：双指针</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -591,9 +595,22 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 4
+        Total : 5
         </div>
         <!-- search  -->
         
@@ -609,7 +626,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-5-LongestPalindromicSubstring/" >leetcode-413. Longest Palindromic Substring</a>
+            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring - 副本/" >leetcode-5. Longest Palindromic Substring</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-15-3sum/" >leetcode-413. Longest Palindromic Substring</a>
         </li>
     
     
