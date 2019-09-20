@@ -346,6 +346,108 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/20/leetcode-33-search-in-rotated-sorted-array/" >
+            
+                <span>leetcode-33-search-in-rotated-sorted-array</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-33. search in rotated sorted array（搜索旋转排序数组）由于题目要求了logn的复杂度，直接想到了二分法，难点在于这个if的条件咋写
+底下代码是借鉴的 异或条件，很简洁太强了
+12345678910111213141516171819class Solution &#123;public:    int search(vector&lt;int&gt;&amp; nums, int target) &#123;        int s=0;        //找最小        int left=0,right=nums.size()...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/20</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/20/leetcode-96-unique-binary-search-tree/" >
+            
+                <span>leetcode-96-unique-binary-search-trees</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-96. unique-binary-search-trees（不同的二叉搜索树）法一：动态规划
+主要是找到公式
+
+
+1234567891011class Solution &#123;public:    int numTrees(int n) &#123;        vector&lt;int&gt; dp(n+1,0);        dp[0]=1;dp[1]=1;        for(int i=2;i&lt;=n;i++)            for(int j=1;j&lt;=i;j++)                dp[i]+=dp[j-1]*...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/20</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/20/leetcode-146-LRUcache/" >
+            
+                <span>leetcode-146-LRU cache</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-238. LRU cache（LRU 缓存策略）哈希表
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354class LRUCache &#123;private:    unordered_map&lt;int, list&lt;pair&lt;int,int&gt;&gt;::iterator&gt; map;    list&lt;pair&lt;int,int&gt;&gt; cache;    int cap;pu...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/20</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/19/leetcode-238-product-of-array-except-self/" >
+            
+                <span>leetcode-238-product-of-array-except-self</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-238. product-of-array-except-self（除自身以外数组的乘积）
+解法1：
+乘积=左边的乘积*右边的乘积
+12345678910111213141516171819class Solution &#123;public:    vector&lt;int&gt; productExceptSelf(vector&lt;int&gt;&amp; nums) &#123;        vector&lt;int&gt; res(nums.size());        int k=1;        for(int i=0;i&lt;nums.s...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/19</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/09/19/leetcode-48-Rotate Image/" >
             
                 <span>leetcode-48</span>
@@ -499,127 +601,10 @@
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/09/12/leetcode-169- Majority Element/" >
-            
-                <span>leetcode-169.  Majority Element</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-169.  Majority Element（求众数）
-123456789101112Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.You may assume that the array is non-empty and the majority element always exist in the array.Example 1:Input: [3,2,3]O...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/09/11/leetcode-461-Hamming Distance/" >
-            
-                <span>leetcode-461. Hamming Distance</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-461. [Hamming Distance]（汉明距离）
-
-The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
-Given two integers x and y, calculate the Hamming distance.
-Note:0 ≤ x, y &lt; 231.
-Example:
-Input: x = 1, y = 4
-
-Output: 2Explanation:1   (0...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/11</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/09/11/leetcode-226- Invert Binary Tree/" >
-            
-                <span>leetcode-617. Invert Binary Tree</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-617. [ Invert Binary Tree]（翻转二叉树）
-
-Invert a binary tree.
-Example:
-Input:
-​    4
-   /   \
-  2     7
- / \   / \
-1   3 6   9
-Output:​    4
-  /    7     2/ \   / 9   6 3   1
-
-解法：这道题的核心在于遍历节点，只要能接触到每一个节点，就能反转它的左右孩子，至于遍历方式反而不重要了，先序后序中序层次都一样，都可以用。1234567891011121314151617181920/** * Definition ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/11</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/09/11/leetcode-617-Merge Two Binary Trees/" >
-            
-                <span>leetcode-617. Merge Two Binary Trees</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-617. Merge Two Binary Trees（合并二叉树）
-
-Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
-You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/11</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">NEXT &#62;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/2/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -923,9 +908,93 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 19
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -938,6 +1007,11 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/20</span><a class="archive-post-title" href= "/2019/09/20/leetcode-96-unique-binary-search-tree/" >leetcode-96-unique-binary-search-trees</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -985,6 +1059,16 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/leetcode-617-Merge Two Binary Trees/" >leetcode-617. Merge Two Binary Trees</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-15-3sum/" >leetcode-15. 3Sum</a>
+        </li>
+    
+    
     
     
     
@@ -996,6 +1080,86 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/23/Remind/" >Welcome to Xucheng‘s wonderland</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/19/leetcode-238-product-of-array-except-self/" >leetcode-238-product-of-array-except-self</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-33-search-in-rotated-sorted-array/" >leetcode-33-search-in-rotated-sorted-array</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-146-LRUcache/" >leetcode-146-LRU cache</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2019/09/10/leetcode-39-CombinationSum/" >leetcode-39. Combination Sum</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring/" >leetcode-5. Longest Palindromic Substring</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2019/07/30/leetcode-2-Add2Numbers/" >leetcode-2. add 2 numbers</a>
         </li>
     
     
@@ -1038,54 +1202,6 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/leetcode-34-Find First and Last Position of Element in Sorted Array/" >leetcode-34. Find First and Last Position of Element in Sorted Array</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/leetcode-617-Merge Two Binary Trees/" >leetcode-617. Merge Two Binary Trees</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2019/09/10/leetcode-39-CombinationSum/" >leetcode-39. Combination Sum</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring/" >leetcode-5. Longest Palindromic Substring</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-15-3sum/" >leetcode-15. 3Sum</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2019/07/30/leetcode-2-Add2Numbers/" >leetcode-2. add 2 numbers</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
         </li>
     
     </div>
