@@ -346,6 +346,175 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/24/leetcode-7-reverse-integer/" >
+            
+                <span>leetcode-7-reverse integer</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-7.reverse integer（整数反转）1234567891011121314class Solution &#123;public:    int reverse(int x) &#123;        int max = 0x7fffffff, min = 0x80000000;//int的最大值最小值        long res=0;        while(x!=0)        &#123;            res=res*10+x%10;            x=x/10;        &#125;        return (r...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/24</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/24/leetcode-1029-two-city-scheduling/" >
+            
+                <span>leetcode-1029-two city scheduling</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-1029.two city scheduling（两地调度）123456789101112131415161718class Solution &#123;public:    int twoCitySchedCost(vector&lt;vector&lt;int&gt;&gt;&amp; costs) &#123;        vector&lt;int&gt; costDifference(costs.size(),0);//priceB-priceA        //假设全都去A，选一半人去B，需要选total+priceB-priceA最小，即priceB...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/24</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/24/leetcode-543-diameter-of-binary-tree/" >
+            
+                <span>leetcode-543-diameter of binary tree</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-543.diameter of binary tree（二叉树的直径）DFS 深搜 就是左右子树最高相加
+1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * struct TreeNode &#123; *     int val; *     TreeNode *left; *     TreeNode *right; *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#12...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/24</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/24/leetcode-703-kth-largest-element-in-a-stream/" >
+            
+                <span>leetcode-703-kth largest element in a stream</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-703.kth-largest-element-in-a-stream（数据流中的第k大元素）优先队列
+12345678910111213141516171819202122232425262728class KthLargest &#123;public:    //优先队列    priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq;    int size;    KthLargest(int k, vector&lt;int&gt;&amp; nums) &#123;       ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/24</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/23/leetcode-443-string-compression/" >
+            
+                <span>leetcode-443-string compression</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-443.string compression（压缩字符串）双指针
+但出现了最后一组字符+数字在循环之外的情况，所以在chars数组后加了个-1的哨兵
+123456789101112131415161718192021222324252627class Solution &#123;public:    int compress(vector&lt;char&gt;&amp; chars) &#123;        int read=0,write=0,num=0;        //read 读指针 write 写指针 num计数指针        int c=cha...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/23</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/23/leetcode-415-add-strings/" >
+            
+                <span>leetcode-415-add strings</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-415.add strings（字符串相加）自己写的代码又臭又长，debug时候出现的错误有：
+9+99，1+9，…主要就是处理进位的问题
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647class Solution &#123;public:    string addStrings(string num1, string num2) &#123;        int m=num1.size(),n=num2.size();        vec...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/23</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/21/leetcode-877-stone-game/" >
+            
+                <span>leetcode-877-stone game</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-877.stone game（石子游戏）DP!dp[i][j]为piles[i]~piles[j]Alex最多可以赢Lee的分数
+参考链接:https://blog.csdn.net/qq874455953/article/details/82696196
+123456789101112class Solution &#123;public:    bool stoneGame(vector&lt;int&gt;&amp; piles) &#123;        int n=piles.size();        vector&lt;vector&lt;int&gt...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/21</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >
             
                 <span>leetcode-378-kth smallest element in a sorted matrix</span>
@@ -411,188 +580,6 @@
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/14/leetcode-300-longest-increasing-subsequence/" >
-            
-                <span>leetcode-300-longest increasing subsequence</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-300.longest increasing subsequence参考：https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/
-法一：
-普通动态规划
-12345678910111213141516171819class Solution &#123;public:    int lengthOfLIS(vector&lt;int&gt;&amp; nums) &#123;   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/10/leetcode-4-median-of-two-sorted-arrays/" >
-            
-                <span>leetcode-4-median of two sorted arrays</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-4.median-of-two-sorted-arrays（寻找两个有序数组的中位数）中位数可以转变为第k小问题
-参考:https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/
-12345678910111213141516171819202122232425class Solution &#123;public:    double findMedianSortedArrays(vec...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/10</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/10/leetcode-1021-remove-outermost-parentheses/" >
-            
-                <span>leetcode-1021-remove outermost parentheses</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-1021.remove outermost parentheses（删除最外层的括号）最外面的左括号跳过，L初始为1；当右括号数量等于左括号数量的位置就是最外面的右括号
-12345678910111213141516171819class Solution &#123;public:    string removeOuterParentheses(string S) &#123;        int l=1,r=0;        string res;        for(int i=1;i&lt;S.size();i++)        &#123;     ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/10</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/10/leetcode-856-score-of-parentheses/" >
-            
-                <span>leetcode-856-score of parentheses</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-856.score of parentheses（括号的分数）借鉴别人的 (()(())) = (()) + ((())) , 且  分数 = 2^(层数-1)出现 ‘(‘ 代表层数+1 ， 出现 ‘)’ 代表层数 -1
-算的时候其实是将2*（1+2）当作  2x1+2x2来算的
-12345678910111213class Solution &#123;public:    int scoreOfParentheses(string S) &#123;        int deep=0,res=0;        for(int i=0;i&lt;S.size();...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/10</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/09/leetcode-859-buddy-strings/" >
-            
-                <span>leetcode-859-buddy strings</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-859.buddy-strings（亲密字符串）三种情况：
-
-长度不同直接返回false
-
-A==B，有重复字符，true；无重复字符，false（这里开始没有考虑到
-
-A！=B，有两个不同，交换可使A==B 返回true，否则false
-这里判断重复使用了set！！！！！！！！！！！
-
-
-123456789101112131415161718192021222324252627282930class Solution &#123;public:    bool buddyStrings(string A, string B) &#123;        if(A.si...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/09</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/08/leetcode-923-3sum-with-multiplicity/" >
-            
-                <span>leetcode-923-3sum with multiplicity</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-923.3sum-with-multiplicity（三数之和的多种可能）法一：桶排序
-写的时候，忘记去掉重复计算的部分了
-12345678910111213141516171819202122232425262728293031class Solution &#123;public:    int threeSumMulti(vector&lt;int&gt;&amp; A, int target) &#123;        long res=0;        long num[101]=&#123;0&#125;;        for(int i=0;i&lt...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >
-            
-                <span>leetcode-921-minimum add to make parentheses validsolution</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-921.minimum-add-to-make-parentheses-validsolution（使括号有效的最少添加）法一：不用栈，直接算。有（的话，接下来的）就可以匹配，反之，则无法匹配
-12345678910111213141516class Solution &#123;public:    int minAddToMakeValid(string S) &#123;        int l=0,r=0;        for(int i=0;i&lt;S.size();i++)        &#123;            if(S[i]==&apos...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/08</span>
             </div>
             <!-- tags  -->
             
@@ -1433,9 +1420,218 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 42
+        Total : 49
         </div>
         <!-- search  -->
         
@@ -1446,40 +1642,40 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/19/leetcode-238-product-of-array-except-self/" >leetcode-238-product-of-array-except-self</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/20</span><a class="archive-post-title" href= "/2019/09/20/leetcode-96-unique-binary-search-tree/" >leetcode-96-unique-binary-search-trees</a>
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2019/09/23/leetcode-139-wordBreak/" >leetcode-139-word break</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/21/leetcode-877-stone-game/" >leetcode-877-stone game</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/23/leetcode-141-linkedListCycle/" >leetcode-141-Linked list cycle</a>
         </li>
     
     
@@ -1504,6 +1700,16 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2019/10/23/leetcode-443-string-compression/" >leetcode-443-string compression</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2019/10/23/leetcode-415-add-strings/" >leetcode-415-add strings</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1557,7 +1763,7 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2019/09/23/leetcode-139-wordBreak/" >leetcode-139-word break</a>
+            <span class="archive-post-date">09/20</span><a class="archive-post-title" href= "/2019/09/20/leetcode-96-unique-binary-search-tree/" >leetcode-96-unique-binary-search-trees</a>
         </li>
     
     
@@ -1574,29 +1780,6 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
         <li class="archive-post-item">
             <span class="archive-post-date">09/17</span><a class="archive-post-title" href= "/2019/09/17/leetcode-148-sort list/" >leetcode-148</a>
         </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/26/leetcode-312-burstBallons/" >leetcode-312-burst ballons</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -1687,105 +1870,7 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/leetcode-34-Find First and Last Position of Element in Sorted Array/" >leetcode-34. Find First and Last Position of Element in Sorted Array</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/23/leetcode-141-linkedListCycle/" >leetcode-141-Linked list cycle</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-322-coin-change/" >leetcode-322-coin change</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/06/leetcode-22-GenerateParentheses/" >leetcode-22. Generate Parentheses</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-179-largest-number/" >leetcode-179-largest number</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
         </li>
     
     
@@ -1813,6 +1898,48 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-1029-two-city-scheduling/" >leetcode-1029-two city scheduling</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/09/leetcode-859-buddy-strings/" >leetcode-859-buddy strings</a>
         </li>
     
@@ -1827,7 +1954,147 @@ A！=B，有两个不同，交换可使A==B 返回true，否则false
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/leetcode-34-Find First and Last Position of Element in Sorted Array/" >leetcode-34. Find First and Last Position of Element in Sorted Array</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-33-search-in-rotated-sorted-array/" >leetcode-33-search-in-rotated-sorted-array</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-179-largest-number/" >leetcode-179-largest number</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-703-kth-largest-element-in-a-stream/" >leetcode-703-kth largest element in a stream</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-7-reverse-integer/" >leetcode-7-reverse integer</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-543-diameter-of-binary-tree/" >leetcode-543-diameter of binary tree</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/06/leetcode-22-GenerateParentheses/" >leetcode-22. Generate Parentheses</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/19/leetcode-238-product-of-array-except-self/" >leetcode-238-product-of-array-except-self</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/26/leetcode-312-burstBallons/" >leetcode-312-burst ballons</a>
         </li>
     
     </div>
