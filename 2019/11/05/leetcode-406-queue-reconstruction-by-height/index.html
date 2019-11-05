@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>leetcode-300-longest increasing subsequence · Summer</title>
+    <title>leetcode-406-queue-reconstruction-by-height · Summer</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Summer.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">leetcode-300-longest increasing subsequence</a>
+                <a href="#" class="post-name">leetcode-406-queue-reconstruction-by-height</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            leetcode-300-longest increasing subsequence
+            leetcode-406-queue-reconstruction-by-height
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">219</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">124</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2019/11/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,14 +395,9 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="leetcode-300-longest-increasing-subsequence"><a href="#leetcode-300-longest-increasing-subsequence" class="headerlink" title="leetcode-300.longest increasing subsequence"></a>leetcode-300.longest increasing subsequence</h1><p>参考：<a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/</a></p>
-<p>法一：</p>
-<p>普通动态规划</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int lengthOfLIS(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">       //o(n2)的方法</span><br><span class="line">       vector&lt;int&gt; dp(nums.size(),1);</span><br><span class="line">       int res=0;</span><br><span class="line">       for(int i=0;i&lt;nums.size();i++)</span><br><span class="line">       &#123;</span><br><span class="line">           for(int j=0;j&lt;i;j++)</span><br><span class="line">           &#123;</span><br><span class="line">               if(nums[j]&lt;nums[i])</span><br><span class="line">                    dp[i]=max(dp[i],dp[j]+1);</span><br><span class="line">           &#125;</span><br><span class="line">           res=max(res,dp[i]);</span><br><span class="line">       &#125;</span><br><span class="line">       return res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>法二：动态规划+二分</p>
-<p>使用二分在tail中插入（替换元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int lengthOfLIS(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">       </span><br><span class="line">       vector&lt;int&gt; tail(nums.size());</span><br><span class="line">       int res=0;</span><br><span class="line">       for(int x=0;x&lt;nums.size();x++)</span><br><span class="line">       &#123;</span><br><span class="line">           int i=0,j=res;//tail中用于二分法</span><br><span class="line">           while(i&lt;j)//找插入tail中的位置</span><br><span class="line">           &#123;</span><br><span class="line">               int m=(i+j)/2;</span><br><span class="line">               if(tail[m]&lt;nums[x])i=m+1;</span><br><span class="line">               else j=m;</span><br><span class="line">           &#125;</span><br><span class="line">           tail[i]=nums[x];</span><br><span class="line">           if(res==j)res++;</span><br><span class="line">       &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h1 id="leetcode-406-queue-reconstruction-by-height（根据身高重建队列）"><a href="#leetcode-406-queue-reconstruction-by-height（根据身高重建队列）" class="headerlink" title="leetcode-406.queue reconstruction by height（根据身高重建队列）"></a>leetcode-406.queue reconstruction by height（根据身高重建队列）</h1><p>贪心，先排序，然后插入</p>
+<p>这里用到了lambda表达式（sort</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; reconstructQueue(vector&lt;vector&lt;int&gt;&gt;&amp; people) &#123;</span><br><span class="line">        sort(people.begin(),people.end(),[] (const vector&lt;int&gt;&amp; a,const vector&lt;int&gt;&amp; b)&#123;</span><br><span class="line">            if(a[0]&gt;b[0])return true;</span><br><span class="line">            if(a[0]==b[0]&amp;&amp;a[1]&lt;b[1])return true;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        vector&lt;vector&lt;int&gt;&gt; res;</span><br><span class="line">        for(auto&amp; p:people)</span><br><span class="line">            res.insert(res.begin()+p[1],p);</span><br><span class="line">        return  res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
     </article>
@@ -410,9 +405,9 @@ height:50vh;
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://763002955.github.io">Xucheng</a>
-            <p>原文链接：<a href="https://763002955.github.io/2019/10/14/leetcode-300-longest-increasing-subsequence/">https://763002955.github.io/2019/10/14/leetcode-300-longest-increasing-subsequence/</a>
-            <p>发表日期：<a href="https://763002955.github.io/2019/10/14/leetcode-300-longest-increasing-subsequence/">October 14th 2019, 1:01:58 pm</a>
-            <p>更新日期：<a href="https://763002955.github.io/2019/10/14/leetcode-300-longest-increasing-subsequence/">October 14th 2019, 3:27:26 pm</a>
+            <p>原文链接：<a href="https://763002955.github.io/2019/11/05/leetcode-406-queue-reconstruction-by-height/">https://763002955.github.io/2019/11/05/leetcode-406-queue-reconstruction-by-height/</a>
+            <p>发表日期：<a href="https://763002955.github.io/2019/11/05/leetcode-406-queue-reconstruction-by-height/">November 5th 2019, 4:28:44 pm</a>
+            <p>更新日期：<a href="https://763002955.github.io/2019/11/05/leetcode-406-queue-reconstruction-by-height/">November 5th 2019, 4:32:35 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -421,16 +416,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/10/14/leetcode-179-largest-number/" title= "leetcode-179-largest number">
-                    <div class="nextTitle">leetcode-179-largest number</div>
+                <a href= "/2019/11/05/leetcode-455-assign-cookies/" title= "leetcode-455-assign cookies">
+                    <div class="nextTitle">leetcode-455-assign cookies</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/10/leetcode-4-median-of-two-sorted-arrays/" title= "leetcode-4-median of two sorted arrays">
-                    <div class="prevTitle">leetcode-4-median of two sorted arrays</div>
+                <a href= "/2019/10/29/leetcode-647-palindromic-substrings/" title= "leetcode-647-palindromic substring">
+                    <div class="prevTitle">leetcode-647-palindromic substring</div>
                 </a>
             
         </li>
@@ -542,7 +537,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-300-longest-increasing-subsequence"><span class="toc-number">1.</span> <span class="toc-text">leetcode-300.longest increasing subsequence</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-406-queue-reconstruction-by-height（根据身高重建队列）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-406.queue reconstruction by height（根据身高重建队列）</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
