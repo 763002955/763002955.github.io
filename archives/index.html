@@ -346,6 +346,58 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/08/leetcode-78-subsets/" >
+            
+                <span>leetcode-78-subsets</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-78.subsets（子集）法一：回溯法，深度优先
+123456789101112131415161718192021class Solution &#123;private:    void func(vector&lt;vector&lt;int&gt;&gt; &amp;res, vector&lt;int&gt;&amp; nums, vector&lt;int&gt;&amp; set, int i)    &#123;        if(i&gt;=nums.size())return;        set.push_back(nums[i]);    ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/08</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/08/leetcode-92-reverse-linked-list-ii/" >
+            
+                <span>leetcode-92-reverse-linked-list-ii</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-92.reverse linked list ii（反转链表II）1-2-3-4-5
+1-3-2-4-5
+1-4-3-2-5
+如上，在遍历的过程中一步步插入
+pre一直指向的是1，也就是反转之前的那个节点，head指向的一直是反转开始的节点，只有hnext根据反转的进度一直在改变，比如说一开始是3，    2，3反转之后变成4
+1234567891011121314151617181920212223242526/** * Definition for singly-linked list. * struct ListNode &#123; *     int val;...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/08</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/11/07/leetcode-484-find-permutation/" >
             
                 <span>leetcode-484-find-permutation</span>
@@ -527,52 +579,6 @@ dp[i,j]代表i-j是否为回文子串，
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/29</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/28/leetcode-945-minimum-increment-to-make-array-unique/" >
-            
-                <span>leetcode-945-minimum-increment-to-make-array-unique</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-945.minimum increment to make array unique（使数组唯一的最小增量）1234567891011121314class Solution &#123;public:    int minIncrementForUnique(vector&lt;int&gt;&amp; A) &#123;        sort(A.begin(),A.end());        int ans=0,cur=0;        for(int i=0;i&lt;A.size();i++)        &#123;            if(A[...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/28</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/28/leetcode-386-lexicographical-numbers/" >
-            
-                <span>leetcode-386-lexicographical numbers</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-386.lexicographical numbers（字典序排数）12345678910111213141516class Solution &#123;public:    vector&lt;int&gt; lexicalOrder(int n) &#123;        vector&lt;int&gt; res;        dfs(0,n,res);        return res;    &#125;    void dfs(int k,int n, vector&lt;int&gt; &amp;res)    &#123;        if(k...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/28</span>
             </div>
             <!-- tags  -->
             
@@ -1914,9 +1920,55 @@ dp[i,j]代表i-j是否为回文子串，
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 61
+        Total : 63
         </div>
         <!-- search  -->
         
@@ -1927,8 +1979,69 @@ dp[i,j]代表i-j是否为回文子串，
     
     
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/08/leetcode-92-reverse-linked-list-ii/" >leetcode-92-reverse-linked-list-ii</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2019/10/08/leetcode-922-sort-array-by-parity-ii/" >leetcode-922-sort array by parity ii</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/23/Remind/" >Welcome to Xucheng‘s wonderland</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span><a class="archive-post-title" href= "/2019/11/08/leetcode-78-subsets/" >leetcode-78-subsets</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2007,11 +2120,6 @@ dp[i,j]代表i-j是否为回文子串，
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2019/10/08/leetcode-922-sort-array-by-parity-ii/" >leetcode-922-sort array by parity ii</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2019/09/26/leetcode-42-trappingRainWater/" >leetcode-42-trapping rain water</a>
         </li>
     
@@ -2029,71 +2137,6 @@ dp[i,j]代表i-j是否为回文子串，
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span><a class="archive-post-title" href= "/2019/09/25/leetcode-84-largest-rectangle-in-histogram/" >leetcode-84-largest-rectangle-in-histogram</a>
         </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/23/Remind/" >Welcome to Xucheng‘s wonderland</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-1029-two-city-scheduling/" >leetcode-1029-two city scheduling</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-33-search-in-rotated-sorted-array/" >leetcode-33-search-in-rotated-sorted-array</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -2151,59 +2194,23 @@ dp[i,j]代表i-j是否为回文子串，
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/25/leetcode-202-happy-number/" >leetcode-202-happy number</a>
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/leetcode-617-Merge Two Binary Trees/" >leetcode-617. Merge Two Binary Trees</a>
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-146-LRUcache/" >leetcode-146-LRU cache</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2019/09/10/leetcode-39-CombinationSum/" >leetcode-39. Combination Sum</a>
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/29/leetcode-309-best-time-to-buy-and-sell-stock-with-cooldown/" >leetcode-309-best time to buy and sell stock with cooldown</a>
+            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring/" >leetcode-5. Longest Palindromic Substring</a>
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/09/leetcode-859-buddy-strings/" >leetcode-859-buddy strings</a>
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-15-3sum/" >leetcode-15. 3Sum</a>
         </li>
     
     
@@ -2226,82 +2233,12 @@ dp[i,j]代表i-j是否为回文子串，
     
         </ul>
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2019/09/10/leetcode-39-CombinationSum/" >leetcode-39. Combination Sum</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-322-coin-change/" >leetcode-322-coin change</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/leetcode-34-Find First and Last Position of Element in Sorted Array/" >leetcode-34. Find First and Last Position of Element in Sorted Array</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/26/leetcode-312-burstBallons/" >leetcode-312-burst ballons</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/06/leetcode-22-GenerateParentheses/" >leetcode-22. Generate Parentheses</a>
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2019/07/30/leetcode-2-Add2Numbers/" >leetcode-2. add 2 numbers</a>
         </li>
     
     
@@ -2329,101 +2266,63 @@ dp[i,j]代表i-j是否为回文子串，
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/23/leetcode-141-linkedListCycle/" >leetcode-141-Linked list cycle</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-1029-two-city-scheduling/" >leetcode-1029-two city scheduling</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/26/leetcode-312-burstBallons/" >leetcode-312-burst ballons</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/06/leetcode-11-LetterCombinationsofaPhoneNumber/" >leetcode-11. Letter Combinations of a Phone Number</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-7-reverse-integer/" >leetcode-7-reverse integer</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2019/09/03/leetcode-5-LongestPalindromicSubstring/" >leetcode-5. Longest Palindromic Substring</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/21/leetcode-877-stone-game/" >leetcode-877-stone game</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/leetcode-617-Merge Two Binary Trees/" >leetcode-617. Merge Two Binary Trees</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/leetcode-15-3sum/" >leetcode-15. 3Sum</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2019/07/30/leetcode-2-Add2Numbers/" >leetcode-2. add 2 numbers</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/06/leetcode-392-is-subsequence/" >leetcode-392-is-subsequence</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-134-gas-station/" >leetcode-134-gas station</a>
         </li>
     
     
@@ -2451,7 +2350,175 @@ dp[i,j]代表i-j是否为回文子串，
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-7-reverse-integer/" >leetcode-7-reverse integer</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-134-gas-station/" >leetcode-134-gas station</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/21/leetcode-877-stone-game/" >leetcode-877-stone game</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/06/leetcode-392-is-subsequence/" >leetcode-392-is-subsequence</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/29/leetcode-309-best-time-to-buy-and-sell-stock-with-cooldown/" >leetcode-309-best time to buy and sell stock with cooldown</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/06/leetcode-22-GenerateParentheses/" >leetcode-22. Generate Parentheses</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/leetcode-34-Find First and Last Position of Element in Sorted Array/" >leetcode-34. Find First and Last Position of Element in Sorted Array</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-146-LRUcache/" >leetcode-146-LRU cache</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-33-search-in-rotated-sorted-array/" >leetcode-33-search-in-rotated-sorted-array</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/09/leetcode-859-buddy-strings/" >leetcode-859-buddy strings</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-322-coin-change/" >leetcode-322-coin change</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/25/leetcode-202-happy-number/" >leetcode-202-happy number</a>
         </li>
     
     
@@ -2480,20 +2547,6 @@ dp[i,j]代表i-j是否为回文子串，
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-543-diameter-of-binary-tree/" >leetcode-543-diameter of binary tree</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/23/leetcode-141-linkedListCycle/" >leetcode-141-Linked list cycle</a>
         </li>
     
     </div>
