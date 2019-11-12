@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>leetcode-945-minimum-increment-to-make-array-unique · Summer</title>
+    <title>leetcode-46&amp;47-permutations-i&amp;ii · Summer</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Summer.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">leetcode-945-minimum-increment-to-make-array-unique</a>
+                <a href="#" class="post-name">leetcode-46&47-permutations-i&ii</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            leetcode-945-minimum-increment-to-make-array-unique
+            leetcode-46&47-permutations-i&ii
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">147</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">275</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/28</span>
+                    <span class="post-intro-time">2019/11/12</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,21 +395,25 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="leetcode-945-minimum-increment-to-make-array-unique（使数组唯一的最小增量）"><a href="#leetcode-945-minimum-increment-to-make-array-unique（使数组唯一的最小增量）" class="headerlink" title="leetcode-945.minimum increment to make array unique（使数组唯一的最小增量）"></a>leetcode-945.minimum increment to make array unique（使数组唯一的最小增量）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int minIncrementForUnique(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        sort(A.begin(),A.end());</span><br><span class="line">        int ans=0,cur=0;</span><br><span class="line">        for(int i=0;i&lt;A.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(A[i]&gt;cur)cur=A[i];</span><br><span class="line">            else ans+=cur-A[i];</span><br><span class="line">            cur++;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h1 id="leetcode-46-permutations（全排列）"><a href="#leetcode-46-permutations（全排列）" class="headerlink" title="leetcode-46.permutations（全排列）"></a>leetcode-46.permutations（全排列）</h1><p>回溯，用swap可以避免重复，加了if可以剪枝，去掉不需要的交换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; res;</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; permute(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        backtrack(nums,0);</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">    void backtrack(vector&lt;int&gt;&amp; nums,int start)</span><br><span class="line">    &#123;</span><br><span class="line">        if(start==nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            res.push_back(nums);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=start;i&lt;nums.size();i++)&#123;</span><br><span class="line">            if(i!=start)swap(nums[i],nums[start]);</span><br><span class="line">            backtrack(nums,start+1);</span><br><span class="line">            if(i!=start)swap(nums[i],nums[start]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>先排序，cur是满足不重复条件下，该位置需要填的数组</p>
-<p>比如说 1，1，2，4，5，9</p>
-<p>首先在下标0位置，由于A[i]&gt;cur，所以cur=1 从1开始继续数</p>
-<p>等到下标为1时，Ai 为1 此时cur=2，需要把A1+1变成2</p>
+
+
+<h1 id="leetcode-47-permutations-ii（全排列ii）"><a href="#leetcode-47-permutations-ii（全排列ii）" class="headerlink" title="leetcode-47.permutations ii（全排列ii）"></a>leetcode-47.permutations ii（全排列ii）</h1><p>回溯，简单来说就是 用1122做例子</p>
+<p>1122-先处理1+122-》1+1+22-》1212-》以此列推-》1221  处理完成之后回溯到1122</p>
+<p>然后-》2112-》2+112-》2+1+12-》2121-》。。。-》2211</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; res;</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; permuteUnique(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        backtrack(nums,0);</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">    void backtrack(vector&lt;int&gt; nums,int start)//注意这里不是&amp;nums</span><br><span class="line">    &#123;</span><br><span class="line">        if(start==nums.size())</span><br><span class="line">        &#123;</span><br><span class="line">            res.push_back(nums);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=start;i&lt;nums.size();i++)&#123;</span><br><span class="line">            if(i!=start &amp;&amp; nums[i]==nums[start])continue;</span><br><span class="line">            if(i!=start)swap(nums[i],nums[start]);</span><br><span class="line">            backtrack(nums,start+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://763002955.github.io">Xucheng</a>
-            <p>原文链接：<a href="https://763002955.github.io/2019/10/28/leetcode-945-minimum-increment-to-make-array-unique/">https://763002955.github.io/2019/10/28/leetcode-945-minimum-increment-to-make-array-unique/</a>
-            <p>发表日期：<a href="https://763002955.github.io/2019/10/28/leetcode-945-minimum-increment-to-make-array-unique/">October 28th 2019, 2:07:58 pm</a>
-            <p>更新日期：<a href="https://763002955.github.io/2019/10/28/leetcode-945-minimum-increment-to-make-array-unique/">October 28th 2019, 2:15:19 pm</a>
+            <p>原文链接：<a href="https://763002955.github.io/2019/11/12/leetcode-46&47-permutation-i&ii/">https://763002955.github.io/2019/11/12/leetcode-46&47-permutation-i&ii/</a>
+            <p>发表日期：<a href="https://763002955.github.io/2019/11/12/leetcode-46&47-permutation-i&ii/">November 12th 2019, 2:45:33 pm</a>
+            <p>更新日期：<a href="https://763002955.github.io/2019/11/12/leetcode-46&47-permutation-i&ii/">November 12th 2019, 4:02:43 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -417,17 +421,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/10/29/leetcode-309-best-time-to-buy-and-sell-stock-with-cooldown/" title= "leetcode-309-best time to buy and sell stock with cooldown">
-                    <div class="nextTitle">leetcode-309-best time to buy and sell stock with cooldown</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/28/leetcode-386-lexicographical-numbers/" title= "leetcode-386-lexicographical numbers">
-                    <div class="prevTitle">leetcode-386-lexicographical numbers</div>
+                <a href= "/2019/11/11/leetcode-77-combinations/" title= "leetcode-77-combinations">
+                    <div class="prevTitle">leetcode-77-combinations</div>
                 </a>
             
         </li>
@@ -539,7 +538,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-945-minimum-increment-to-make-array-unique（使数组唯一的最小增量）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-945.minimum increment to make array unique（使数组唯一的最小增量）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-46-permutations（全排列）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-46.permutations（全排列）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-47-permutations-ii（全排列ii）"><span class="toc-number">2.</span> <span class="toc-text">leetcode-47.permutations ii（全排列ii）</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
