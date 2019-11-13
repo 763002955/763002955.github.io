@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Summer</title>
+    <title>leetcode-287-find-the-duplicate-number · Summer</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Summer.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">leetcode-287-find-the-duplicate-number</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Summer.</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            leetcode-287-find-the-duplicate-number
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">407</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/11/13</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,63 +393,60 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/11/05/leetcode-455-assign-cookies/" >
-            
-                <span>leetcode-455-assign cookies</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-455.assign cookies（分发饼干）贪心，先排序，然后依次分发饼干，这里写的是优先将少的分配给胃口小的孩子，反着来先分大的也是可以的，区别在于数组是从大到小还是从小到大排序
-123456789101112131415class Solution &#123;public:    int findContentChildren(vector&lt;int&gt;&amp; g, vector&lt;int&gt;&amp; s) &#123;        sort(g.begin(),g.end());        sort(s.begin(),s.end...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="leetcode-287-find-the-duplicate-number（寻找重复数）"><a href="#leetcode-287-find-the-duplicate-number（寻找重复数）" class="headerlink" title="leetcode-287.find the duplicate number（寻找重复数）"></a>leetcode-287.find the duplicate number（寻找重复数）</h1><p>要求不能够改变数组的值，空间复杂度o1</p>
+<p>使用二分</p>
+<p>假设n=8</p>
+<p>先检查数值在1-4的有多少个，如果比4个多，就说明1-4中间肯定有重复数字，</p>
+<p>以此列推</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findDuplicate(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        if(nums.size()&lt;2)return -1;</span><br><span class="line">        int i=0;</span><br><span class="line">        int left=1,right=nums.size(),count=0;</span><br><span class="line">        while(left!=right)</span><br><span class="line">        &#123;</span><br><span class="line">            int n=left+(right-left)/2;</span><br><span class="line">        //	cout&lt;&lt;left&lt;&lt;&quot;----&quot;&lt;&lt;right&lt;&lt;&quot;   &quot;&lt;&lt;n&lt;&lt;endl;</span><br><span class="line">            for(int i=0;i&lt;nums.size();i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(nums[i]&gt;=left&amp;&amp;nums[i]&lt;=n) count++;</span><br><span class="line">                if(count&gt;n-left+1) break;</span><br><span class="line">            &#125;</span><br><span class="line">        //    cout&lt;&lt;count&lt;&lt;endl;</span><br><span class="line">            if(count&gt;n-left+1)</span><br><span class="line">                right=n;</span><br><span class="line">            else</span><br><span class="line">                left=n+1;//这里原先写成了left=n，会导致超时....</span><br><span class="line">            count=0;</span><br><span class="line">        &#125;</span><br><span class="line">        return left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>剑指offer上有个一样的题目，我写的代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int containsDuplicate(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    if(nums.size()&lt;2)return -1;</span><br><span class="line">    int i=0;</span><br><span class="line">    int left=1,right=nums.size(),count=0;</span><br><span class="line">    for(int i=0;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">    	if(nums[i]&lt;0||nums[i]&gt;=nums.size())</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;&quot;error input!&quot;&lt;&lt;endl;</span><br><span class="line">			return -2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	while(left!=right)</span><br><span class="line">	&#123;</span><br><span class="line">		int n=left+(right-left)/2;</span><br><span class="line">	//	cout&lt;&lt;left&lt;&lt;&quot;----&quot;&lt;&lt;right&lt;&lt;&quot;   &quot;&lt;&lt;n&lt;&lt;endl;</span><br><span class="line">		for(int i=0;i&lt;nums.size();i++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(nums[i]&gt;=left&amp;&amp;nums[i]&lt;=n) count++;</span><br><span class="line">			if(count&gt;n-left+1) break;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;count&lt;&lt;endl;</span><br><span class="line">		if(count&gt;n-left+1)</span><br><span class="line">			right=n;</span><br><span class="line">		else</span><br><span class="line">			left=n;</span><br><span class="line">		count=0;</span><br><span class="line">	&#125;</span><br><span class="line">	return left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	vector&lt;int&gt; nums = &#123;1,2,3,1&#125;;</span><br><span class="line">	cout&lt;&lt; containsDuplicate(nums)&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/11/05/leetcode-406-queue-reconstruction-by-height/" >
-            
-                <span>leetcode-406-queue-reconstruction-by-height</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-406.queue reconstruction by height（根据身高重建队列）贪心，先排序，然后插入
-这里用到了lambda表达式（sort
-123456789101112131415class Solution &#123;public:    vector&lt;vector&lt;int&gt;&gt; reconstructQueue(vector&lt;vector&lt;int&gt;&gt;&amp; people) &#123;        sort(people.begin(),people.end(),[] (const vector&l...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://763002955.github.io">Xucheng</a>
+            <p>原文链接：<a href="https://763002955.github.io/2019/11/13/leetcode-287-find-the-duplicate-number/">https://763002955.github.io/2019/11/13/leetcode-287-find-the-duplicate-number/</a>
+            <p>发表日期：<a href="https://763002955.github.io/2019/11/13/leetcode-287-find-the-duplicate-number/">November 13th 2019, 5:00:38 pm</a>
+            <p>更新日期：<a href="https://763002955.github.io/2019/11/13/leetcode-287-find-the-duplicate-number/">November 13th 2019, 5:04:02 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/11/12/leetcode-46&47-permutation-i&ii/" title= "leetcode-46&47-permutations-i&ii">
+                    <div class="prevTitle">leetcode-46&47-permutations-i&ii</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2019/11/">&#60; PREV</a><a class="page-number" href="/archives/2019/11/">1</a><span class="page-number current">2</span>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -472,6 +524,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-287-find-the-duplicate-number（寻找重复数）"><span class="toc-number">1.</span> <span class="toc-text">leetcode-287.find the duplicate number（寻找重复数）</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2654,6 +2724,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
