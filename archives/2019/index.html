@@ -346,6 +346,32 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/20/leetcode-107-binary-tree-level-order-traversal-ii/" >
+            
+                <span>leetcode-107. binary-tree-level-order-traversal-ii</span>
+        </a>
+        <div class="abstract-content">
+            leetcode-107. binary-tree-level-order-traversal-ii（二叉树的层次遍历II）
+递归，将入vector放在递归调用的后面即可
+还有方法就是按普通层次遍历，然后结果倒过来
+12345678910111213141516171819202122232425262728293031323334353637/** * Definition for a binary tree node. * struct TreeNode &#123; *     int val; *     TreeNode *left; *     TreeNode *right...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/20</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/11/14/leetcode-74-search-a-2d-matrix/" >
             
                 <span>leetcode-74. search-a-2d-matrix</span>
@@ -563,30 +589,6 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
         <div class="abstract-content">
             leetcode-452.minimum number of arrows to burst balloons（用最少数量的箭射爆气球）这是按照x end排序
 12345678910111213141516171819202122232425bool cmp(const vector&lt;int&gt;&amp; x,const vector&lt;int&gt;&amp; y)&#123;    return (x[1]&lt;y[1]);&#125;class Solution &#123;public:    int findMinArrowShots(vector&lt;vec...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/11/06/leetcode-392-is-subsequence/" >
-            
-                <span>leetcode-392-is-subsequence</span>
-        </a>
-        <div class="abstract-content">
-            leetcode-392.is subsequence（判断子序列）双指针
-12345678910111213class Solution &#123;public:    bool isSubsequence(string s, string t) &#123;        int x=0,y=0;        while(x&lt;s.size()&amp;&amp;y&lt;t.size())        &#123;            if(s[x]==t[y])x++;            y++;        &#125;        if(x==s.size...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -2100,9 +2102,38 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 68
+        Total : 69
         </div>
         <!-- search  -->
         
@@ -2132,7 +2163,7 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/14/leetcode-74-search-a-2d-matrix/" >leetcode-74. search-a-2d-matrix</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/20/leetcode-107-binary-tree-level-order-traversal-ii/" >leetcode-107. binary-tree-level-order-traversal-ii</a>
         </li>
     
     
@@ -2373,7 +2404,7 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
         </li>
     
     
@@ -2583,7 +2614,21 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/07/24/leetcode-413-ArithmeticSlices/" >leetcode-413. Arithmetic Slices</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-146-LRUcache/" >leetcode-146-LRU cache</a>
         </li>
     
     
@@ -2598,6 +2643,34 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/24/leetcode-7-reverse-integer/" >leetcode-7-reverse integer</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/29/leetcode-309-best-time-to-buy-and-sell-stock-with-cooldown/" >leetcode-309-best time to buy and sell stock with cooldown</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/11/14/leetcode-74-search-a-2d-matrix/" >leetcode-74. search-a-2d-matrix</a>
         </li>
     
     
@@ -2653,7 +2726,7 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/20/leetcode-146-LRUcache/" >leetcode-146-LRU cache</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
         </li>
     
     
@@ -2681,7 +2754,7 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/08/leetcode-921-minimum-add-to-make-parentheses-validsolution/" >leetcode-921-minimum add to make parentheses validsolution</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-378-kth-smallest-element-in-a-sorted-matrix/" >leetcode-378-kth smallest element in a sorted matrix</a>
         </li>
     
     
@@ -2696,34 +2769,6 @@ pre一直指向的是1，也就是反转之前的那个节点，head指向的一
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/14/leetcode-322-coin-change/" >leetcode-322-coin change</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/10/leetcode-856-score-of-parentheses/" >leetcode-856-score of parentheses</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/10/29/leetcode-309-best-time-to-buy-and-sell-stock-with-cooldown/" >leetcode-309-best time to buy and sell stock with cooldown</a>
         </li>
     
     </div>
