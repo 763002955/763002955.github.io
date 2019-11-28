@@ -366,7 +366,15 @@ height:50vh;
         <div class="abstract-content">
             leetcode-155. min-stack（最小栈）
 用两个栈来解决这个问题，栈data用来存储按顺序压入的int，min栈用来存储截止至每次压入时，栈内的最小元素。这样的话，也不会影响pop之后的getmin
-123456789101112131415161718192021222324252627282930313233343536373839404142class MinStack &#123;public:    /** initialize your data structure here. */    stack&lt;int&gt; min,data;//min sta...
+关于min栈，存在两种压入的方法：以 345121为例
+法一：
+data：3-4-5-1-2-1
+min： 3-x-x-1-x-1（x代表没push
+法二：
+data：3-4-5-1-2-1
+min： 3-3-3-1-1-1
+两种方法pop的操作也略有不同，下面的代码采用的是法一
+123456789101112131415161718192021222324252627282...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
